@@ -1,57 +1,76 @@
 
+Aby se vaše stránka zobrazovala vysoko (tzv. SEO), nestačí mít jen hezký web, ale musíte vyhledávačům (Google, Seznam) jasně říct, že jste relevantní pro Kadaň a Klášterec.
+
+V aktuálním kódu už máme solidní základ, ale aby byl web naprosto "neprůstřelný", přidal jsem do něj ještě strukturovaná data (tzv. Schema.org). To je kód, který běžný uživatel nevidí, ale vyhledávače ho milují, protože jim dává přesné informace o vaší firmě, telefonu a lokalitě.
+
+Tady je kompletní verze se všemi SEO vychytávkami:
+
+HTML
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reality Kadaň & Klášterec | Prodej bytů, domů a garáží</title>
     
-    <meta name="description" content="Chystáte se prodat nemovitost v Kadani nebo Klášterci nad Ohří? Zajistíme odhad ceny zdarma, bezpečný právní servis a prověřené kupce.">
+    <title>Reality Kadaň & Klášterec | Odhad zdarma a rychlý prodej</title>
+    <meta name="description" content="Specialista na reality v Kadani a Klášterci. Nabízíme odhad ceny zdarma, prověřené kupce a okamžitý výkup nemovitostí investory. Prodejte bezpečně v roce 2026.">
+    <meta name="keywords" content="reality Kadaň, reality Klášterec nad Ohří, prodej bytu Kadaň, odhad nemovitosti zdarma, výkup nemovitostí Kadaň, realitní kancelář">
+    <meta name="author" content="Reality Kadaň">
+    <link rel="canonical" href="https://realitykadan.cz/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Reality Kadaň & Klášterec",
+      "image": "https://realitykadan.cz/REALITYKADAŇLOGO1.png",
+      "telephone": "+420603206308",
+      "email": "info@realitykadan.cz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kadaň",
+        "addressRegion": "Ústecký kraj",
+        "addressCountry": "CZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.375,
+        "longitude": 13.272
+      },
+      "url": "https://realitykadan.cz",
+      "priceRange": "$$"
+    }
+    </script>
     
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
         :root { --primary: #2c3e50; --accent: #e67e22; --success: #27ae60; --urgent: #c0392b; --light: #f4f7f6; }
         body { font-family: 'Arial', sans-serif; margin: 0; background-color: var(--light); color: #333; line-height: 1.6; }
-        
         .top-nav { background: #1a252f; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         .top-nav a { color: white; text-decoration: none; font-weight: bold; background: var(--accent); padding: 8px 15px; border-radius: 5px; font-size: 0.9em; }
-
         header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
         .logo-container { background: white; display: inline-block; padding: 15px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        
         .container { max-width: 900px; margin: -30px auto 40px; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        
         h1 { margin: 0; font-size: 2.2em; }
         h2 { color: var(--primary); border-bottom: 2px solid var(--light); padding-bottom: 10px; margin-top: 35px; }
-        
         .benefit { display: flex; align-items: center; margin-bottom: 20px; }
         .benefit-icon { background: var(--success); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-weight: bold; flex-shrink: 0; }
-
         .urgent-box { background: #fff5f5; border: 2px dashed var(--urgent); padding: 30px; border-radius: 10px; margin: 40px 0; position: relative; }
         .urgent-tag { position: absolute; top: -15px; left: 20px; background: var(--urgent); color: white; padding: 5px 15px; border-radius: 5px; font-weight: bold; font-size: 0.9em; }
-
         .cta-box { background: #fdf2e9; border: 2px solid var(--accent); padding: 30px; border-radius: 10px; margin-top: 30px; text-align: center; }
-        
         .smart-btn { display: inline-block; background: var(--accent); color: white; padding: 15px 35px; border-radius: 5px; font-weight: bold; font-size: 1.1em; transition: 0.3s; border: none; cursor: pointer; text-align: center; min-width: 280px; }
         .smart-btn:hover { background: #d35400; transform: translateY(-2px); }
         .btn-red { background: var(--urgent); }
-
         .expert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
         .expert-card { background: #f9f9f9; padding: 20px; border-radius: 8px; border-top: 4px solid var(--accent); }
-
         .map-container { margin-top: 30px; border-radius: 10px; overflow: hidden; height: 350px; border: 1px solid #ddd; }
-        
-        /* Lepší design sekce doplňkových služeb */
         .services-box { margin-top: 40px; padding: 30px; background: #ebf5fb; border-radius: 10px; border: 1px solid #d6eaf8; }
         .service-item { display: flex; align-items: flex-start; margin-top: 20px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .service-icon { font-size: 1.8em; margin-right: 15px; }
         .service-text strong { display: block; color: #007bff; margin-bottom: 5px; }
         .service-text a { color: #007bff; text-decoration: none; font-weight: bold; }
-        .service-text a:hover { text-decoration: underline; }
-
         .footer { text-align: center; margin-top: 40px; padding: 20px; color: #7f8c8d; font-size: 0.9em; border-top: 1px solid #eee; }
-
         @media (max-width: 600px) { .expert-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -64,88 +83,88 @@
 
     <header>
         <div class="logo-container">
-            <img src="REALITYKADAŇLOGO1.png" alt="Reality Kadaň" style="max-width: 250px; height: auto; display: block;">
+            <img src="REALITYKADAŇLOGO1.png" alt="Reality Kadaň logo" style="max-width: 250px; height: auto; display: block;">
         </div>
         <h1>Reality Kadaň</h1>
-        <p style="color: #ecf0f1; font-size: 1.2em;">Profesionální prodej a výkup nemovitostí</p>
+        <p style="color: #ecf0f1; font-size: 1.2em;">Profesionální prodej nemovitostí na Kadaňsku</p>
     </header>
 
     <div class="container">
         
         <h2>Chystáte se prodat v Kadani či Klášterci?</h2>
-        <p>Zajistíme kompletní péči o vaši nemovitost od prvního odhadu až po bezpečné vyplacení peněz.</p>
+        <p>Zajistíme kompletní péči o vaši nemovitost – od přesného odhadu až po finální vyplacení peněz.</p>
         
         <div class="benefit">
             <div class="benefit-icon">✓</div>
-            <div><strong>Odhad tržní ceny zdarma</strong> - Zjistěte skutečnou tržní hodnotu svého majetku pro rok 2026.</div>
+            <div><strong>Odhad tržní ceny zdarma</strong> - Zjistěte skutečnou tržní hodnotu svého bytu či domu pro rok 2026.</div>
         </div>
         <div class="benefit">
             <div class="benefit-icon">✓</div>
-            <div><strong>Prověření kupci</strong> - Máme databázi aktivních klientů hledajících bydlení v našem regionu.</div>
+            <div><strong>Prověření kupci</strong> - Máme přehled o klientech, kteří aktuálně poptávají reality v Kadani.</div>
         </div>
         <div class="benefit">
             <div class="benefit-icon">✓</div>
-            <div><strong>Bezpečný převod</strong> - Kompletní právní servis, úschova peněz a administrativa jsou v ceně.</div>
+            <div><strong>Bezpečný právní servis</strong> - Advokátní úschova peněz a hladký přepis na katastru jsou u nás standardem.</div>
         </div>
 
         <div class="urgent-box">
             <div class="urgent-tag">Bleskové řešení</div>
             <h2 style="margin-top: 0; border: none; color: var(--urgent);">Chcete prodat ihned?</h2>
-            <p>Máme síť prověřených <strong>soukromých investorů</strong> připravených k okamžitému odkupu bytů, domů i garáží.</p>
+            <p>Máme síť prověřených <strong>soukromých investorů</strong> připravených k okamžitému odkupu nemovitostí.</p>
             <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
-                <li>🚀 <strong>Peníze k dispozici</strong> – Nečekáme na bankovní úvěry.</li>
-                <li>💼 <strong>Diskrétní jednání</strong> – Řešíme i exekuce, dluhy a složité právní situace.</li>
-                <li>💰 <strong>Záloha ihned</strong> – Možnost vyplacení části peněz hotově ihned po dohodě.</li>
+                <li>🚀 <strong>Peníze bez čekání</strong> – Nečekáme na bankovní schválení úvěrů.</li>
+                <li>💼 <strong>Diskrétní řešení</strong> – Vyřešíme i exekuce, zástavy a složité situace.</li>
+                <li>💰 <strong>Okamžitá záloha</strong> – Část peněz můžete mít k dispozici ihned.</li>
             </ul>
             <button onclick="this.innerHTML='📩 info@realitykadan.cz | 📞 603 206 308'; this.style.background='#2c3e50';" class="smart-btn btn-red">Chci nabídku od investora</button>
         </div>
 
-        <h2>Proč prodávat s námi?</h2>
+        <h2>Proč si vybrat lokálního makléře?</h2>
         <div class="expert-grid">
             <div class="expert-card">
-                <strong>🏠 Znalost lokality</strong>
-                <p>V Kadani i Klášterci jsme doma. Známe vývoj cen v každé čtvrti i panelovém domě.</p>
+                <strong>🏠 Známe místní trh</strong>
+                <p>Nerozhodujeme z Prahy. V Kadani a Klášterci žijeme a známe cenu každého typu bytu.</p>
             </div>
             <div class="expert-card">
-                <strong>🤝 Osobní záruka</strong>
-                <p>Nerozhodujeme od stolu v Praze. Každému prodeji věnujeme 100% pozornost a lidský přístup.</p>
+                <strong>🤝 Poctivé jednání</strong>
+                <p>Osobní doporučení je pro nás klíčové. Zakládáme si na důvěře a výsledcích.</p>
             </div>
         </div>
 
         <div class="cta-box">
             <h3>Nezávazná konzultace</h3>
-            <p>Poradíme vám, jak nejlépe připravit vaši nemovitost k prodeji za nejlepší cenu.</p>
+            <p>Získejte jasnou představu o ceně a postupu prodeje bez jakýchkoliv závazků.</p>
             <button onclick="this.innerHTML='📩 info@realitykadan.cz | 📞 603 206 308'; this.style.background='#2c3e50';" class="smart-btn">Získat odhad zdarma</button>
         </div>
 
-        <h2>Kde nás najdete?</h2>
+        <h2>Lokalita působení</h2>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40445.64805799797!2d13.23594615!3d50.3725515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470a049405f6396b%3A0x400af0f66150240!2zS2FkYcW4!5e0!3m2!1scs!2scz!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
         <div class="services-box">
-            <h3 style="margin-top: 0; color: #2c3e50;">Doplňkové služby pro majitele</h3>
-            <p>Víme, že prodej nemovitosti začíná jejím stavem. Spolupracujeme s prověřenými specialisty v regionu:</p>
+            <h3 style="margin-top: 0; color: #2c3e50;">Doplňkové služby pro prodejce</h3>
+            <p>Spolupracujeme s prověřenými partnery v regionu, kteří vám pomohou připravit dům k prodeji:</p>
             
             <div class="service-item">
                 <div class="service-icon">✨</div>
                 <div class="service-text">
-                    <strong>Profesionální úklid</strong>
-                    Chcete, aby vaše nemovitost na fotkách i prohlídkách zářila? Využijte <a href="https://vaseuklizecka.cz" target="_blank">VaseUklizecka.cz</a>.
+                    <strong>Profesionální úklid nemovitostí</strong>
+                    Pro perfektní fotky a první dojem na prohlídkách doporučujeme <a href="https://vaseuklizecka.cz" target="_blank">VaseUklizecka.cz</a>.
                 </div>
             </div>
 
             <div class="service-item">
                 <div class="service-icon">📦</div>
                 <div class="service-text">
-                    <strong>Rychlé vyklízení</strong>
-                    Potřebujete vyklidit starý nábytek nebo pozůstalost? Nejlevnější řešení najdete na <a href="https://levnevyklidime.cz" target="_blank">LevněVyklidime.cz</a>.
+                    <strong>Vyklízení nemovitostí</strong>
+                    Potřebujete bleskově vyklidit byt nebo sklep? Nejvýhodnější v regionu je <a href="https://levnevyklidime.cz" target="_blank">LevněVyklidime.cz</a>.
                 </div>
             </div>
         </div>
 
         <div class="footer">
-            © 2026 Reality Kadaň | E-mail: info@realitykadan.cz | Tel: 603 206 308
+            © 2026 Reality Kadaň | Kontakt: info@realitykadan.cz | 603 206 308
         </div>
     </div>
 
