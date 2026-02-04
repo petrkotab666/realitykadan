@@ -42,10 +42,13 @@
 
         .map-container { margin-top: 30px; border-radius: 10px; overflow: hidden; height: 350px; border: 1px solid #ddd; }
         
-        /* Rozšířená sekce partnerů */
-        .partner-box { margin-top: 40px; padding: 30px; background: #ebf5fb; border-radius: 8px; border-left: 5px solid #007bff; }
-        .partner-box a { color: #007bff; text-decoration: none; font-weight: bold; }
-        .partner-box a:hover { text-decoration: underline; }
+        /* Lepší design sekce doplňkových služeb */
+        .services-box { margin-top: 40px; padding: 30px; background: #ebf5fb; border-radius: 10px; border: 1px solid #d6eaf8; }
+        .service-item { display: flex; align-items: flex-start; margin-top: 20px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .service-icon { font-size: 1.8em; margin-right: 15px; }
+        .service-text strong { display: block; color: #007bff; margin-bottom: 5px; }
+        .service-text a { color: #007bff; text-decoration: none; font-weight: bold; }
+        .service-text a:hover { text-decoration: underline; }
 
         .footer { text-align: center; margin-top: 40px; padding: 20px; color: #7f8c8d; font-size: 0.9em; border-top: 1px solid #eee; }
 
@@ -55,7 +58,7 @@
 <body>
 
     <div class="top-nav">
-        <span>📍 Regionální specialista Kadaň & Klášterec</span>
+        <span>📍 Lokální specialista Kadaň & Klášterec</span>
         <a href="tel:+420603206308">📞 Volat 603 206 308</a>
     </div>
 
@@ -64,73 +67,81 @@
             <img src="REALITYKADAŇLOGO1.png" alt="Reality Kadaň" style="max-width: 250px; height: auto; display: block;">
         </div>
         <h1>Reality Kadaň</h1>
-        <p style="color: #ecf0f1; font-size: 1.2em;">Váš partner pro bezpečný a rychlý prodej nemovitosti</p>
+        <p style="color: #ecf0f1; font-size: 1.2em;">Profesionální prodej a výkup nemovitostí</p>
     </header>
 
     <div class="container">
         
         <h2>Chystáte se prodat v Kadani či Klášterci?</h2>
-        <p>Pomůžeme vám prodat za nejvyšší možnou cenu a zajistíme veškerý servis, který majitel nemovitosti potřebuje.</p>
+        <p>Zajistíme kompletní péči o vaši nemovitost od prvního odhadu až po bezpečné vyplacení peněz.</p>
         
         <div class="benefit">
             <div class="benefit-icon">✓</div>
-            <div><strong>Odhad tržní ceny zdarma</strong> - Zjistěte, jakou skutečnou hodnotu má vaše nemovitost pro rok 2026.</div>
+            <div><strong>Odhad tržní ceny zdarma</strong> - Zjistěte skutečnou tržní hodnotu svého majetku pro rok 2026.</div>
         </div>
         <div class="benefit">
             <div class="benefit-icon">✓</div>
-            <div><strong>Prověření kupci</strong> - Máme přístup k databázi klientů, kteří hledají bydlení přímo v našem regionu.</div>
+            <div><strong>Prověření kupci</strong> - Máme databázi aktivních klientů hledajících bydlení v našem regionu.</div>
         </div>
         <div class="benefit">
             <div class="benefit-icon">✓</div>
-            <div><strong>Bezpečný převod</strong> - Právní úschova peněz a kompletní administrativa v ceně našich služeb.</div>
+            <div><strong>Bezpečný převod</strong> - Kompletní právní servis, úschova peněz a administrativa jsou v ceně.</div>
         </div>
 
         <div class="urgent-box">
             <div class="urgent-tag">Bleskové řešení</div>
             <h2 style="margin-top: 0; border: none; color: var(--urgent);">Chcete prodat ihned?</h2>
-            <p>Máme síť prověřených <strong>soukromých investorů</strong>, kteří jsou připraveni odkoupit vaši nemovitost (byt, dům i garáž) v rekordním čase.</p>
+            <p>Máme síť prověřených <strong>soukromých investorů</strong> připravených k okamžitému odkupu bytů, domů i garáží.</p>
             <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
-                <li>🚀 <strong>Peníze k dispozici</strong> – Nečekáme na vyřízení hypotéky kupujícího.</li>
-                <li>💼 <strong>Diskrétní jednání</strong> – Vhodné i pro nemovitosti s exekucí nebo dluhy.</li>
-                <li>💰 <strong>Okamžitá záloha</strong> – Možnost vyplacení části kupní ceny předem.</li>
+                <li>🚀 <strong>Peníze k dispozici</strong> – Nečekáme na bankovní úvěry.</li>
+                <li>💼 <strong>Diskrétní jednání</strong> – Řešíme i exekuce, dluhy a složité právní situace.</li>
+                <li>💰 <strong>Záloha ihned</strong> – Možnost vyplacení části peněz hotově ihned po dohodě.</li>
             </ul>
             <button onclick="this.innerHTML='📩 info@realitykadan.cz | 📞 603 206 308'; this.style.background='#2c3e50';" class="smart-btn btn-red">Chci nabídku od investora</button>
         </div>
 
-        <h2>Proč si vybrat nás?</h2>
+        <h2>Proč prodávat s námi?</h2>
         <div class="expert-grid">
             <div class="expert-card">
-                <strong>🏠 Lokální experti</strong>
-                <p>V regionu žijeme. Známe každou ulici v Kadani i v Klášterci, což nám umožňuje stanovit přesnou prodejní cenu.</p>
+                <strong>🏠 Znalost lokality</strong>
+                <p>V Kadani i Klášterci jsme doma. Známe vývoj cen v každé čtvrti i panelovém domě.</p>
             </div>
             <div class="expert-card">
-                <strong>🤝 Lidský přístup</strong>
-                <p>U nás nejste jen číslo v systému. Zakládáme si na osobním jednání a stoprocentní důvěře majitele.</p>
+                <strong>🤝 Osobní záruka</strong>
+                <p>Nerozhodujeme od stolu v Praze. Každému prodeji věnujeme 100% pozornost a lidský přístup.</p>
             </div>
         </div>
 
         <div class="cta-box">
-            <h3>Nezávazná konzultace a odhad</h3>
-            <p>Poradíme vám, jak z prodeje vytěžit maximum. Stačí se nám ozvat.</p>
+            <h3>Nezávazná konzultace</h3>
+            <p>Poradíme vám, jak nejlépe připravit vaši nemovitost k prodeji za nejlepší cenu.</p>
             <button onclick="this.innerHTML='📩 info@realitykadan.cz | 📞 603 206 308'; this.style.background='#2c3e50';" class="smart-btn">Získat odhad zdarma</button>
         </div>
 
-        <h2>Kde působíme?</h2>
+        <h2>Kde nás najdete?</h2>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40445.64805799797!2d13.23594615!3d50.3725515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470a049405f6396b%3A0x400af0f66150240!2zS2FkYcW4!5e0!3m2!1scs!2scz!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <div class="partner-box">
-            <h3 style="margin-top: 0; color: #0056b3;">Kompletní péče o vaši nemovitost</h3>
-            <p>Prodáváte nebo kupujete nemovitost v našem regionu? Víme, že prodej často obnáší i spoustu starostí s přípravou. Nechte to na profesionálech.</p>
-            <p>
-                ✨ <strong>Pro zářivě čistý domov</strong> a perfektní prezentaci před prohlídkami využijte služby 
-                <a href="https://vaseuklizecka.cz" target="_blank">VaseUklizecka.cz</a>. 
-            </p>
-            <p>
-                📦 <strong>Potřebujete vyklidit</strong> starý nábytek, haraburdí nebo připravit dům k prodeji? Nejlevnější řešení v regionu najdete na 
-                <a href="https://levnevyklidime.cz" target="_blank">LevněVyklidime.cz</a>.
-            </p>
+        <div class="services-box">
+            <h3 style="margin-top: 0; color: #2c3e50;">Doplňkové služby pro majitele</h3>
+            <p>Víme, že prodej nemovitosti začíná jejím stavem. Spolupracujeme s prověřenými specialisty v regionu:</p>
+            
+            <div class="service-item">
+                <div class="service-icon">✨</div>
+                <div class="service-text">
+                    <strong>Profesionální úklid</strong>
+                    Chcete, aby vaše nemovitost na fotkách i prohlídkách zářila? Využijte <a href="https://vaseuklizecka.cz" target="_blank">VaseUklizecka.cz</a>.
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">📦</div>
+                <div class="service-text">
+                    <strong>Rychlé vyklízení</strong>
+                    Potřebujete vyklidit starý nábytek nebo pozůstalost? Nejlevnější řešení najdete na <a href="https://levnevyklidime.cz" target="_blank">LevněVyklidime.cz</a>.
+                </div>
+            </div>
         </div>
 
         <div class="footer">
